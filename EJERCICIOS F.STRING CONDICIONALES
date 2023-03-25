@@ -1,0 +1,179 @@
+'''uso del operador %s
+
+name="eric"
+last_name="palmera"
+age=26
+profesion="administrador"
+aficion="video juegos"
+print( "hola, %s %s. tienes %s.años eres %s y te gustan los %s " %(name,last_name,age,profesion,aficion))
+
+
+uso del .format
+
+name="eric"
+last_name="palmera"
+age=26
+profesion="administrador"
+aficion="video juegos"
+
+print("hola mi nombre es {0} {1} tengo {2} años y soy {3}, me gustan los {4}".format(name,last_name,age,profesion,aficion))
+
+
+ uso actual f.string
+
+name="eric"
+last_name="palmera"
+age=26
+profesion="administrador"
+aficion="video juegos"
+
+print(f"hola {name} {last_name} tu edad es {age}, tu profesion es {profesion} y te gustan los {aficion}")
+
+ejercicio 3
+realice un programa que pida dos numeros y los imprima en pantalla con format
+
+valor1= int(input(" por favor digite el numero 1:  "))
+valor2=int(input("por favor digite el numero 2:  "))
+suma=valor1+valor2
+print(f" la suma de {valor1} y {valor2} es de {suma}")
+print(f"{5*5}")
+
+posicionamiento
+from os import system
+system ("cls")
+
+valor1= int(input(" por favor digite el numero 1:  "))
+valor2=int(input("por favor digite el numero 2:  "))
+suma=valor1+valor2
+
+cadena=f"""
+{valor1:10}
+{valor2:10}
+------------
+{suma:10}
+"""
+print(cadena)
+
+
+ejercicios
+
+1. hacer un programa que pida un caracter e indique si es vocal o no
+
+letra=input("ingrese un caracter:  ---->    ")
+
+if letra == 'a'or letra=='e' or letra=='i' or letra == 'o' or letra=='u':
+   #print(" el caracter es una vocal")    
+else:
+    #print("el caracter no es una vocal") '''
+    
+'''ejercicio 2
+construir un programa que simule el funcionamiento de una calculadora que pueda realizar 
+las cuatro operaciones basicas(suma,resta,multiplicacion, y division).
+el usuario debe especificar la operacion con el primer caracter del nombre de la operacion
+
+S, s   suma
+   R, r   resta
+   P,p,M,m   multiplicacion
+   D,d --division
+
+#como hacer un menu de operaciones:
+
+print("menu de operaciones")
+print("1. suma")
+print("2. resta")
+print("3. multiplicacion")
+print("4. division")
+
+
+
+num1=float(input("ingrese el primer numero:  "))
+num2=float(input("ingrese el segundo numero: "))
+
+opcion=(input("ingrese la letra de la operacion a realizar: --->").upper())  #el .upper se utiliza para que me tome la letra como mayuscula.add()
+
+if opcion =="S":
+    suma=num1+num2
+    print(f"\nla suma es:{suma}")
+elif opcion=="R":
+    resta=num1-num2
+    print(f"\n la resta es:{resta}")
+elif opcion=="M":
+    multiplicacion=num1*num2 
+    print(f"\n la multiplicacion es:{multiplicacion}")      
+elif opcion=="D":
+    division=num1/num2    
+    print(f"\n la division es:{division}")
+else:
+    print("ha ingresado una opcion no valida")'''
+    
+'''ejercicio 3
+hacer un programa que simule un cajero automatico con un saldo inicial de $1000000
+1. ingresar dinero en la cuenta
+2. retirar dinero de la cuenta
+3. mostrar dinero disponible
+4.salir      
+       ''' 
+'''from os import system
+system ("cls")     
+saldo=1000000
+print("Menu del cajero automatico\n\n 1.ingresar dinero a la cuenta\n 2.retirar dinero de la cuenta\n 3.mostrar dinero disponible\n 4.salir\n su saldo es", saldo)
+
+opcion=int(input("elija la operacion a realizar----> "))
+
+if opcion == 1: 
+    consignacion=float(input("por favor digite el valor a consignar-----> "))
+    saldo+=(consignacion)
+    print(" el saldo final es",saldo)
+elif opcion==2:
+    retiro=(float(input("por favor indique el valor del retiro---->"  )))
+    if retiro >= saldo:
+        print("usted no tiene fondos suficientes para realizar el retiro")
+    else:
+        saldo-=(retiro)
+        print("el retiro se ha realizado satisfactoriamente")
+        print(f"su saldo es ", {saldo})
+elif opcion==3:
+    print(f" el saldo disponible es de", {saldo})
+    
+elif opcion==4:
+    ("gracias por utilizar el cajero automatico")
+else: print("ha ingresado un dato erroneo")'''
+
+'''ejercicio 4
+la pizzeria bella napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes, los ingredientes para cada tipo de pizza
+aparecen a continuacion.
+
+ingredientes vegetarianos: pimiento y tofu
+ingredientes no vegetarianos:peperoni,jamon y salmon.
+
+escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en funcion de la respuesta
+le muestre un menu con los ingredientes disponibles para que elija la pizza
+
+al final se debe mostrar en pantalla si la pizza elegida es vegetariana o no y todos los ingresdientes que lleva.'''
+
+from os import system
+system ("cls")  
+print("menu de pizzas \n 1.pizza vegetariana\n 2.pizza con proteina animal")
+
+opcion=int(input("por favor seleccione su pedido:  "))
+if opcion==1:
+   ingredientes=int(input("por favor elija sus ingredientes\n 1.pimiento\n 2.tofu\n 3. pimiento y tofu:  "))
+                    
+   if ingredientes==1:
+       print("usted ha elegido la pizza vegetariana hecha a base de pimiento")
+   elif ingredientes==2:
+       print("usted ha elegido la pizza  vegetariana base de tofu")
+   elif ingredientes==3:
+       print("usted a elegido la pizza vegetariana base de pimiento y tofu")
+elif opcion==2:
+     ingredientes=int(input("por favor elija sus ingredientes\n 1.jamon\n 2.salmon\n 3. jamon y salmon:  "))
+     if ingredientes==1:
+       print("usted ha elegido la pizza de proteina animal hecha a base de jamon")
+     elif ingredientes==2:
+       print("usted ha elegido la pizza de proteina animal hecha a  base de salmon")
+     elif ingredientes==3:
+       print("usted a elegido la pizza proteina animal hecha a base de jamon y salmon")
+else:
+    print("por favor elija una opcion valida")
+    
+
